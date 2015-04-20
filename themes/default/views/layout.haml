@@ -1,0 +1,43 @@
+!!! 5
+%html
+  %head
+    %meta{ :charset => "utf-8" }
+    %title= "#{page.title}"
+    %script{ :type => "text/javascript", :src => "/javascripts/prototype.js"}
+    %script{ :type => "text/javascript", :src => "/javascripts/scriptaculous.js?load=effects,builder"}
+    %script{ :type => "text/javascript", :src => "/javascripts/lightbox.js"}
+    %link{ :rel => "stylesheet", :type => "text/css", :media => "screen", :href => "/stylesheets/styles.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :media => "screen", :href => "/stylesheets/lightbox.css" }
+
+    %link{ :rel => "stylesheet", :type => "text/css", :media => "screen", :href => "/stylesheets/dropdown/dropdown.limited.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :media => "screen", :href => "/stylesheets/dropdown/themes/default/default.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :media => "screen", :href => "/stylesheets/dropdown/themes/default/helper.css" }
+
+
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-25033049-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  %body
+    #contmain
+      #left1
+        #right1
+
+          = yield
+
+
+          #footer
+            %p
+              P.O. Box 570 | Talkeetna, AK 99676
+            %p
+              &copy; 2011 Talkeetna Treetop Chalet --
+              %a{:href=>'/credits'} Credits and Acknowledgements
+          / end page
+
